@@ -1,28 +1,32 @@
-// const listWithId = document.querySelector('#categories');
-// console.log(listWithId);
+const catEl = document.querySelectorAll('.item');
+console.log(catEl);
+console.log('Number of categories:', catEl.length);
+catEl.forEach(function (elem) {
+    const itemEl = elem.querySelector('h2');
+    const itemsEl = elem.querySelectorAll('li');
+    console.log('Category:', itemEl.textContent);
+    console.log('Elements:', itemsEl.length)
+});
 
-// const listWithClass = document.querySelector('.item');
-// console.log(listWithClass);
-
-// const menuItemsByTagName = document.querySelectorAll("li");
-// console.log(menuItemsByTagName);
-
-
-
-// const menuItemsByClass = document.querySelectorAll(".menu-item");
-// console.log(menuItemsByClass);
 
 // console.log(document);
 
-// const body = document.body;
-// console.log(body);
+// const listWithId = document.querySelector('#categories');
+// console.log(listWithId);
 
-// const list = body.firstElementChild;
-// console.log(list);
+// item.forEach(function () {
+//   console.log(`Number of categories: ${}`);
+// });
 
-// const firstListItem = list.firstElementChild;
-// console.log(firstListItem);
+// console.log(`Number of categories: ${listWithId}`);
 
-const categories = #categories;
-console.log(listItems);
-const h2 = document.querySelector(".item__title")
+// 13\48 Mod4
+// const pureMultiply = (array, value) => {
+//   const newArray = [];
+
+//   array.forEach(element => {
+//     newArray.push(element * value);
+//   });
+
+//   return newArray;
+// };
