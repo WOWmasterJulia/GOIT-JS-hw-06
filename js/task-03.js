@@ -12,3 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+console.log(images);
+const head = document.createElement("h1");
+console.log(head);
+// document.body.prepend(head);
+// head.textContent = "Hello";
+const markup = "<h2>World</h2> <p>fffffff</p> "
+head.insertAdjacentHTML("beforeend", markup);
