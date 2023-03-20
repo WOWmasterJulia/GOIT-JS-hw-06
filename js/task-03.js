@@ -12,10 +12,31 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-console.log(images);
-const head = document.createElement("h1");
-console.log(head);
-// document.body.prepend(head);
-// head.textContent = "Hello";
-const markup = "<h2>World</h2> <p>fffffff</p> "
-head.insertAdjacentHTML("beforeend", markup);
+// console.log(images);
+// const head = document.createElement("h1");
+// console.log(head);
+// // document.body.prepend(head);
+// // head.textContent = "Hello";
+// const markup = "<h2>World</h2> <p>fffffff</p> "
+// head.insertAdjacentHTML("beforeend", markup);
+
+
+const list = document.querySelector('.gallery');
+const newImages = images.map((elem) => `
+<li>
+ <img src="${elem.url}" alt="${elem.alt}" width="320" height="180">
+</li>`).join("");
+list.insertAdjacentHTML("afterbegin", newImages);
+list.style.listStyle = "none";
+list.style.display = "flex";
+list.style.gap = "20px";
+
+// const ulgalEl = document.querySelector('.gallery');
+// const newStructEl = images.map((elem) => `
+// <li>
+//  <img src="${elem.url}" alt="${elem.alt}" width="320" height="180">
+// </li>`).join("");
+// ulgalEl.insertAdjacentHTML("beforeend", newStructEl);
+// ulgalEl.style.listStyle = "none";
+// ulgalEl.style.display = "flex";
+// ulgalEl.style.gap = "20px";
