@@ -23,7 +23,7 @@ for (const i of ingredients) {
   newElem.push(elem);
 }
 ulElem.append(...newElem);
-
+console.log(newElem);
 
 //  console.log(newElem);
 // console.log(item.textContent);
