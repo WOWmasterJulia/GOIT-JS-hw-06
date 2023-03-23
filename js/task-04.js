@@ -4,8 +4,22 @@
       <button type="button" data-action="increment">+1</button>
 </div> */
 
-const button = document.querySelector("#counter");
 
-button.addEventListener("click", () => {
-  console.log("Button was clicked");
-});
+let counterValue = 0;
+const btnDecrementEl = document.querySelector('[data-action="decrement"]');
+const btnIncrementEl = document.querySelector('[data-action="increment"]');
+const spanElem = document.querySelector("#value");
+
+const btnClick = (event) => {
+    switch (event.currentTarget.dataset.action) {
+        case 'decrement': counterValue -= 1;
+            break;
+        case 'increment': counterValue += 1;
+            break;
+    };
+    spanElem.textContent = counterValue;
+  // spEl.innerHTML = String(counterValue);
+  
+};
+btnDecrementEl.addEventListener('click', btnClick);
+btnIncrementEl.addEventListener('click', btnClick);
