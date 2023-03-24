@@ -6,6 +6,8 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+// Это закоментированое не отсюда
 // const head = document.createElement("h1");
 // console.log(head);
 // document.body.prepend(head);
@@ -25,6 +27,6 @@ for (const i of ingredients) {
 ulElem.append(...newElem);
 console.log(newElem);
 
-//  console.log(newElem);
-// console.log(item.textContent);
-// console.log(elem);
+
+ 
+ 
