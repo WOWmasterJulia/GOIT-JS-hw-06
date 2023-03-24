@@ -9,12 +9,37 @@
       </label>
       <button type="submit">Login</button>
     </form> */
-// const mailEl = document.querySelector("#");
-// const pasEl = document.querySelector("#");
 
+
+// +++++++++++++++ ВАРИАНТ 1 +++++++++++++++++
+  
+// const formEl = document.querySelector(".login-form");
+// formEl.addEventListener("submit", checkSubmit);
+
+// function checkSubmit(event) {
+//     event.preventDefault();
+//    const {
+//     elements: { email, password }
+//     } = event.currentTarget; 
+//     if (email.value.trim() === "" || password.value.trim() === "") {
+//     return alert("Please fill in all the fields!");
+//     }
+//     const result = {
+//         [email.name] : email.value.trim(),
+//         [password.name] : password.value.trim(),
+//     };
+//     console.log(result);
+//     event.currentTarget.reset();
+// };
+
+
+// +++++++++++++++ ВАРИАНТ 2 +++++++++++++++++
+// Global object +++++++++++++++
+  
 const formEl = document.querySelector(".login-form");
-formEl.addEventListener("submit", checkSubmit);
 
+const result = {};
+formEl.addEventListener("submit", checkSubmit);
 function checkSubmit(event) {
     event.preventDefault();
    const {
@@ -22,11 +47,28 @@ function checkSubmit(event) {
     } = event.currentTarget; 
     if (email.value.trim() === "" || password.value.trim() === "") {
     return alert("Please fill in all the fields!");
-    }
-    const result = {
-        [email.name] : email.value.trim(),
-        [password.name] : password.value.trim(),
-    };
-    console.log(result);
+  }
+    result[email.name] = email.value.trim();
+    result[password.name] = password.value.trim();
     event.currentTarget.reset();
 };
+console.log(result);
+
+
+// +++++++++++++++ ВАРИАНТ 3 +++++++++++++++++
+// Не учитывает пробел до и после введенного теекста +++++++++++++++
+
+// const formEl = document.querySelector(".login-form");
+
+// formEl.addEventListener("submit", checkSubmit);
+// function checkSubmit(event) {
+//     event.preventDefault();
+//    const {
+//     elements: { email, password }
+//     } = event.currentTarget; 
+//     if (email.value === "" || password.value === "") {
+//     return alert("Please fill in all the fields!");
+//   }
+//   console.log(`Еmail: ${email.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
+// };

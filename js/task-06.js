@@ -6,7 +6,6 @@
       data-length="6"
       placeholder="Please enter 6 symbols"
     /> */
-// const inputEl = document.querySelector("#validation-input");
 
 
 

@@ -31,12 +31,3 @@ list.style.listStyle = "none";
 list.style.display = "flex";
 list.style.gap = "20px";
 
-// const ulgalEl = document.querySelector('.gallery');
-// const newStructEl = images.map((elem) => `
-// <li>
-//  <img src="${elem.url}" alt="${elem.alt}" width="320" height="180">
-// </li>`).join("");
-// ulgalEl.insertAdjacentHTML("beforeend", newStructEl);
-// ulgalEl.style.listStyle = "none";
-// ulgalEl.style.display = "flex";
-// ulgalEl.style.gap = "20px";
