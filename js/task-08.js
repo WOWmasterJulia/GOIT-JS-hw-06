@@ -58,33 +58,35 @@
 // +++++++++++++++ ВАРИАНТ 3 +++++++++++++++++
 // Не учитывает пробел до и после введенного теекста +++++++++++++++
 
-const formEl = document.querySelector(".login-form");
-
-formEl.addEventListener("submit", checkSubmit);
-function checkSubmit(event) {
-    event.preventDefault();
-   const {
-    elements: { email, password }
-    } = event.currentTarget; 
-    if (email.value === "" || password.value === "") {
-    return alert("Please fill in all the fields!");
-  }
-  console.log(`Еmail: ${email.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
-};
-
-// +++++++++++++++ ВАРИАНТ 4 +++++++++++++++++
 // const formEl = document.querySelector(".login-form");
-// formEl.addEventListener("submit", checkSubmit);
 
+// formEl.addEventListener("submit", checkSubmit);
 // function checkSubmit(event) {
 //     event.preventDefault();
-//     const {
-//         elements: { email, password }
-//     } = event.currentTarget;
-//     if (email.value.trim() === "" || password.value.trim() === "") {
-//         return alert("Please fill in all the fields!");
-//     }
-//     console.log({ email:email.value, password:password.value })
-//     event.currentTarget.reset();
+//    const {
+//     elements: { email, password }
+//     } = event.currentTarget; 
+//     if (email.value === "" || password.value === "") {
+//     return alert("Please fill in all the fields!");
+//   }
+//   console.log(`Еmail: ${email.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
 // };
+
+// +++++++++++++++ ВАРИАНТ 4 +++++++++++++++++
+// НЕ передает данные, только показывает. Трим только на Пароле и можно ставить пробелы(обнуляются)!!!!
+
+const formEl = document.querySelector(".login-form");
+formEl.addEventListener("submit", checkSubmit);
+
+function checkSubmit(event) {
+    event.preventDefault();
+    const {
+        elements: { email, password }
+    } = event.currentTarget;
+    if (email.value.trim() === "" || password.value.trim() === "") {
+        return alert("Please fill in all the fields!");
+    }
+    console.log({ email:email.value, password:password.value.trim() })
+    event.currentTarget.reset();
+};
