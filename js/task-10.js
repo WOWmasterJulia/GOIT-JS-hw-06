@@ -15,7 +15,7 @@ const createBtnEl = document.querySelector('button[data-create]');
 const destroyBtnEl = document.querySelector('button[data-destroy]');
 
 function createBoxes() {
-  const newStructEl = [];
+  // const newStructEl = [];
   let size = 20;
   const divEl = document.querySelector("#boxes");
   for (let i = 0; i < inputEl.value; i += 1) {
@@ -26,7 +26,7 @@ function createBoxes() {
     elem.style.backgroundColor = getRandomHexColor();
     elem.style.marginTop = "10px";
     divEl.appendChild(elem);
-    newStructEl.push(elem);
+    // newStructEl.push(elem);
   }
 }
 function destroyClick() {
