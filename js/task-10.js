@@ -21,8 +21,8 @@ function createBoxes() {
   for (let i = 0; i < inputEl.value; i += 1) {
     const elem = document.createElement("div");
     size = size + 10;
-    elem.style.width = ${size}px;
-    elem.style.height = ${size}px;
+    elem.style.width = `${size}px`;
+    elem.style.height = `${size}px`;
     elem.style.backgroundColor = getRandomHexColor();
     elem.style.marginTop = "10px";
     divEl.appendChild(elem);
